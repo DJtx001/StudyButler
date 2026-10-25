@@ -1,8 +1,56 @@
-# 学途管家 · CRM 客户关系管理系统
+<div align="center">
 
-> <span translate="no">基于 **Spring Boot 3 + MyBatis-Plus + Vue3** 的前后端分离 CRM 系统，打通「**线索 → 商机 → 客户**」完整销售转化链路。</span>
+# 学途管家 · StudyButler
+
+**教育培训行业的 CRM 客户关系管理系统**
+
+打通「线索 → 商机 → 客户」完整销售转化链路，让每一条线索都有人跟进
+
+[![Java](https://img.shields.io/badge/Java-17-ED8B00?logo=openjdk&logoColor=white)](#)
+[![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.5-6DB33F?logo=springboot&logoColor=white)](#)
+[![MyBatis-Plus](https://img.shields.io/badge/MyBatis_Plus-3.5-1F6FEB)](#)
+[![MySQL](https://img.shields.io/badge/MySQL-8-4479A1?logo=mysql&logoColor=white)](#)
+[![Redis](https://img.shields.io/badge/Redis-7-DC382D?logo=redis&logoColor=white)](#)
+[![Redisson](https://img.shields.io/badge/Redisson-3.27-FF0000)](#)
+[![Vue](https://img.shields.io/badge/Vue-3-4FC08D?logo=vuedotjs&logoColor=white)](#)
+[![Element Plus](https://img.shields.io/badge/Element_Plus-2.x-409EFF)](#)
+
+[**项目简介**](#一项目简介)　·　[**技术栈**](#二技术栈)　·　[**系统架构**](#三系统架构)　·　[**数据库设计**](#四数据库设计)　·　[**接口清单**](#五接口清单)　·　[**本地启动**](#六本地启动)
+
+<sub>Spring Boot 3.5 多模块 · MyBatis-Plus · Vue3 + Element Plus · MySQL 8 / Redis 7 · Nginx</sub>
+
+</div>
+
+---
+
+## 30 秒读懂
+
+| 维度 | 一句话 |
+|---|---|
+| **是什么** | 教育培训行业的 CRM：线索 → 商机 → 客户，一条完整的销售转化流水线 |
+| **解决什么** | 线索躺在个人 Excel 里没人接、跟进过程无留痕、管理者看不到转化数据 |
+| **三个关键机制** | 线索 7 天未跟进自动回收 · 商机踢回公海重新分配 · AOP + Redis 队列异步写操作日志 |
+| **技术底座** | Spring Boot 3.5 多模块 + MyBatis-Plus + Vue3 + MySQL 8 / Redis 7，Nginx 反代 |
+| **规模** | 11 张表 · 8 大接口模块 · JWT 统一鉴权 + 统一 Result 响应 |
+
+> **设计信条**：「线索不该躺在某个销售的 Excel 里烂掉」—— 超过 7 天未跟进的线索会被定时任务自动回收到线索池，重新分配，并且每一步流转都写进跟进记录与操作日志。
+
+---
+
+## 目录
+
+- [一、项目简介](#一项目简介)
+- [二、技术栈](#二技术栈)
+- [三、系统架构](#三系统架构)
+- [四、数据库设计](#四数据库设计)
+- [五、接口清单](#五接口清单)
+- [六、本地启动](#六本地启动)
+
+---
 
 ## 一、项目简介
+
+> <span translate="no">基于 **Spring Boot 3 + MyBatis-Plus + Vue3** 的前后端分离 CRM 系统，打通「**线索 → 商机 → 客户**」完整销售转化链路。</span>
 
 面向教育培训行业的客户关系管理系统，销售团队通过系统完成从获客到成交的全流程跟进：
 
@@ -134,3 +182,9 @@ operate:
 ```
 
 **阿里云 OSS**（仅 `/upload` 需要）：配置环境变量 `OSS_ACCESS_KEY_ID`、`OSS_ACCESS_KEY_SECRET`，并在 `application.yml` 填 `aliyun.oss.endpoint / bucketName / region`。
+
+---
+
+<div align="center">
+<sub>如果这个项目对你有帮助，欢迎点个 Star ⭐</sub>
+</div>
